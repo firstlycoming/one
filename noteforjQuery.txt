@@ -1,4 +1,4 @@
-jQuery
+﻿jQuery
 江湖传言，全世界大约有80~90%的网站直接或间接地使用了jQuery。鉴于它如此流行，又如此好用，所以每一个入门JavaScript的前端工程师都应该了解和学习它。
 
 jQuery这么流行，肯定是因为它解决了一些很重要的问题。实际上，jQuery能帮我们干这些事情：
@@ -116,7 +116,11 @@ jQuery; // jQuery(selector, context)
 	$('p,div'); // 把<p>和<div>都选出来
 	$('p.red,p.green'); // 把<p class="red">和<p class="green">都选出来
 注意：选出来的元素是按照它们在HTML中出现的顺序排列的，而且不会有重复元素。
-	例如，<p class="red green">不会被上面的$('p.red,p.green')选择两次。	
+	例如，<p class="red green">不会被上面的$('p.red,p.green')选择两次。
+
+
+学习笔记：定位查找一般分五种：盒子（$('#idname')）；类 （$('.classname')）；标签  （$('tagname')） ；
+	属性名（$('[name=stylename]')） ； 属性值前缀或后缀（$('name^=stylenameprevious')）  	
 
 	
 三、1.层级选择器（Descendant Selector）
@@ -245,7 +249,10 @@ map()方法把一个jQuery对象包含的若干DOM节点转化为其他对象：
 	var haskell = langs.last(); // Haskell, 相当于$('ul.lang li:last-child')
 	var sub = langs.slice(2, 4); // Swift, Scheme, 参数和数组的slice()方法一致
 
+学习笔记：四种一般查找的函数：find('#idname/.classname/tagname/stylename');  parent();  next();   prev();  
+		  过滤的五种函数：filter();    map();    first();    last();    slice();
 
+		  
 五、操作DOM
 1.修改Text和HTML
 jQuery对象的text()和html()方法分别获取节点的文本和原始HTML文本，例如，如下的HTML结构：
@@ -398,6 +405,11 @@ textarea.val(); // 'Hello'
 textarea.val('Hi'); // 文本区域已更新为'Hi'
 
 可见，一个val()就统一了各种输入框的取值和赋值的问题。
+
+学习笔记：修改Text和HTML的语句：text('文本内容'); html('文本内容');  修改css中style值的语句： css();
+		修改class的语句：hasClass(); addClass; removeClass();    显示和隐藏DOM的语句：hide();show();
+		获取DOM信息的语句：width(); height();  操作DOM节点属性的语句：attr();   removeAttr();
+		判断语句：prop(); is();            操作表单的语句：val();(每修改一个用两次)
 
 
 六、修改DOM结构
