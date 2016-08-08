@@ -413,6 +413,7 @@ textarea.val('Hi'); // 文本区域已更新为'Hi'
 
 
 六、修改DOM结构
+
 直接使用浏览器提供的API对DOM结构进行修改，不但代码复杂，而且要针对浏览器写不同的代码。
 
 有了jQuery，我们就专注于操作jQuery对象本身，底层的DOM操作由jQuery完成就可以了，这样一来，修改DOM也大大简化了。
@@ -495,10 +496,11 @@ li.remove(); // 所有<li>全被删除
     }
 })();
 
-
+学习笔记：添加DOM的语句：append();   prepend();    删除DOM节点的语句：  remove();
+		 
+		
 七、事件
 
-阅读: 41241
 因为JavaScript在浏览器中以单线程模式运行，页面加载后，一旦页面上所有的JavaScript代码被执行完后，就只能依赖触发事件来执行JavaScript代码。
 
 浏览器在接收到用户的鼠标或键盘输入后，会自动在对应的DOM节点上触发相应的事件。如果该节点已经绑定了对应的JavaScript处理函数，该函数就会自动调用。
@@ -763,6 +765,8 @@ form.off().submit(function (e) {
     e.preventDefault();
     alert(form.serialize());
 });
+
+
 
 
 八、动画
